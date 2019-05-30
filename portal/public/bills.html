@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="res/css/queries.css">
 		<link rel="stylesheet" href="vendors/css/ionicons.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
-		<title>Innovate: Digital Bank</title>
+		<title>Innovate:La banque digital</title>
 	</head>
 
 	<body>
@@ -21,11 +21,11 @@
 					<img src="res/img/logo-outline.png" alt="Innovate logo" class="logo">
 					<img src="res/img/logo.png" alt="Innovatee logo" class="logo-black">
 					<ul class="main-nav">
-						<li><a href="overview.html">Depense</a></li>
-						<li><a href="bills.html">Fature</a></li>
+						<li><a href="overview.html">Dépenses</a></li>
+						<li><a href="bills.html">Factures</a></li>
 						<li><a href="accounts.html">Comptes</a></li>
 						<li><a href="chat.html">Support</a></li>
-						<li><a href="/endpoints/logout">Se Deconnecter</a></li>
+						<li><a href="/endpoints/logout">Se Déconnecter</a></li>
 					</ul>
 					<a class="mobile-nav-icon"><i class="js-mobile-nav-icon ion-navicon-round"></i></a>
 				</div>
@@ -34,11 +34,11 @@
 
 		<section class="section-spending">
 			<div class="row">
-				<h2>Facture</h2>
+				<h2>Factures </h2>
 			</div>
 			<div class="row">
 				<h3><span id="js-total"></span></h3>
-				<p>Ce mois</p>
+				<p>Ce mois </p>
 			</div>
 		</section>
 
@@ -48,14 +48,14 @@
 					<img src="res/img/sp/dewa.png" alt="logo" class="service-provider-logo">
 				</div>
 				<div class="col span-2-of-5">
-					<h3>Eau et Electricite</h3>
+					<h3>Eau et Eléctricité</h3>
 					<p><span id="utilities_entity"></span><span id="utilities_account"></span></p>
 				</div>
 				<div class="col span-1-of-5">
 					<h3><span id="utilities_amount"></span></h3>
 				</div>
 				<div class="col span-1-of-5">
-					<a id="utilities_pay_button" class="btn btn-ghost" href="#confirm-popup-utiltities">payment</a>
+					<a id="utilities_pay_button" class="btn btn-ghost" href="#confirm-popup-utiltities">paiement</a>
 				</div>
 			</div>
 			<div class="row bill">
@@ -63,14 +63,14 @@
 					<img src="res/img/sp/etisalat.png" alt="logo" class="service-provider-logo">
 				</div>
 				<div class="col span-2-of-5">
-					<h3>Loisir domestique</h3>
+					<h3>Loisir doméstique</h3>
 					<p><span id="home_entertainment_entity"></span><span id="home_entertainment_account"></span></p>
 				</div>
 				<div class="col span-1-of-5">
 					<h3><span id="home_entertainment_amount"></span></h3>
 				</div>
 				<div class="col span-1-of-5">
-					<a id="home_entertainment_pay_button" class="btn btn-ghost" href="#confirm-popup-home-entertainment">Payment</a>
+					<a id="home_entertainment_pay_button" class="btn btn-ghost" href="#confirm-popup-home-entertainment">Paiment</a>
 				</div>
 			</div>
 			<div class="row bill">
@@ -78,14 +78,14 @@
 					<img src="res/img/sp/du.png" alt="Innovatee logo" class="service-provider-logo">
 				</div>
 				<div class="col span-2-of-5">
-					<h3>Telephone Mobile</h3>
+					<h3>Téléphone Mobile</h3>
 					<p><span id="mobile_phone_entity"></span><span id="mobile_phone_account"></span></p>
 				</div>
 				<div class="col span-1-of-5">
 					<h3><span id="mobile_phone_amount"></span></h3>
 				</div>
 				<div class="col span-1-of-5">
-					<a id="mobile_phone_pay_button" class="btn btn-ghost" href="#confirm-popup-mobile-phone">Payment</a>
+					<a id="mobile_phone_pay_button" class="btn btn-ghost" href="#confirm-popup-mobile-phone">Paiement</a>
 				</div>
 			</div>
 			<div class="row bill">
@@ -93,14 +93,14 @@
 					<img src="res/img/sp/innovate.png" alt="Innovatee logo" class="service-provider-logo">
 				</div>
 				<div class="col span-2-of-5">
-					<h3>Carte Credit </h3>
+					<h3>Carte Crédit </h3>
 					<p><span id="credit_card_entity"></span><span id="credit_card_account"></span></p>
 				</div>
 				<div class="col span-1-of-5">
 					<h3><span id="credit_card_amount"></span></h3>
 				</div>
 				<div class="col span-1-of-5">
-					<a id="credit_card_pay_button" class="btn btn-ghost" href="#confirm-popup-credit-card">Payment</a>
+					<a id="credit_card_pay_button" class="btn btn-ghost" href="#confirm-popup-credit-card">Paiement</a>
 				</div>
 			</div>
 		</section>
@@ -111,10 +111,10 @@
 
 		<div id="confirm-popup-utiltities" class="overlay">
 			<div class="popup">
-				<h2>Proceed with payment?</h2>
+				<h2>Procédez au paiment?</h2>
 				<a class="close" href="#">&times;</a>
 				<div class="content">
-				Vous etes entrain de payer <span id="utilities_bill_amount"></span> a propos <span id="utilities_bill_entity"></span><span id="utilities_bill_account"></span>.
+				Vous êtes entrain de payer <span id="utilities_bill_amount"></span> à propos <span id="utilities_bill_entity"></span><span id="utilities_bill_account"></span>.
 				</div>
 				<a id="utilities_confirm_button" class="btn btn-full" href="">Continuez</a>
 			</div>
@@ -122,10 +122,10 @@
 
 		<div id="confirm-popup-home-entertainment" class="overlay">
 			<div class="popup">
-				<h2>Procedez avec payment?</h2>
+				<h2>Procédez au paiement?</h2>
 				<a class="close" href="#">&times;</a>
 				<div class="content">
-					Vous etes entrain de payer  <span id="home_entertainment_bill_amount"></span> a propos  <span id="home_entertainment_bill_entity"></span><span id="home_entertainment_bill_account"></span>.
+					Vous êtes entrain de payer  <span id="home_entertainment_bill_amount"></span> à propos  <span id="home_entertainment_bill_entity"></span><span id="home_entertainment_bill_account"></span>.
 				</div>
 				<a id="home_entertainment_confirm_button" class="btn btn-full" href="t">Continuez</a>
 			</div>
@@ -133,21 +133,21 @@
 
 		<div id="confirm-popup-mobile-phone" class="overlay">
 			<div class="popup">
-				<h2>Procedez avec payment?</h2>
+				<h2>Procédez au paiement?</h2>
 				<a class="close" href="#">&times;</a>
 				<div class="content">
-						Vous etes entrain de payer <span id="mobile_phone_bill_amount"></span> a propos <span id="mobile_phone_bill_entity"></span><span id="mobile_phone_bill_account"></span>.
+						Vous êtes entrain de payer <span id="mobile_phone_bill_amount"></span>à propos <span id="mobile_phone_bill_entity"></span><span id="mobile_phone_bill_account"></span>.
 				</div>
-				<a id="mobile_phone_confirm_button" class="btn btn-full" href="/endpoints/bills/pay?category=mobile_phone">Go ahead</a>
+				<a id="mobile_phone_confirm_button" class="btn btn-full" href="/endpoints/bills/pay?category=mobile_phone">Continuez</a>
 			</div>
 		</div>
 
 		<div id="confirm-popup-credit-card" class="overlay">
 			<div class="popup">
-				<h2>Procedez avec payment?</h2>
+				<h2>Procédez au paiement?</h2>
 				<a class="close" href="#">&times;</a>
 				<div class="content">
-						Vous etes entrain de payer <span id="credit_card_bill_amount"></span> a propos <span id="credit_crd_bill_entity"></span><span id="credit_card_bill_account"></span>.
+						Vous êtes entrain de payer <span id="credit_card_bill_amount"></span> à propos <span id="credit_crd_bill_entity"></span><span id="credit_card_bill_account"></span>.
 				</div>
 				<a id="credit_card_confirm_button" class="btn btn-full" href="">Continuez</a>
 			</div>
@@ -162,7 +162,7 @@
 				<h2>Fait!</h2>
 				<a class="close" href="#">&times;</a>
 				<div class="content">
-					Facture payee. Votre payment est termine avec succe .
+					Facture payee. Votre paiement est terminé avec succés .
 				</div>
 				<i class="ion-android-checkmark-circle icon-big"></i>
 			</div>
@@ -170,10 +170,10 @@
 
 		<div id="failure" class="overlay">
 			<div class="popup">
-				<h2>Un probleme est survenu!</h2>
+				<h2>Un problème est survenu!</h2>
 				<a class="close" href="#">&times;</a>
 				<div class="content">
-					Votre payment peut ne pas etres termine . Essayez encore une fois ou contactez le support s'il vous plait.
+					Votre paiment peut ne pas êtres terminé . Essayez encore une fois ou contactez le support s'il vous plait.
 				</div>
 				<i class="ion-ios-close icon-big"></i>
 			</div>
@@ -183,7 +183,7 @@
 			<div class="row">
 				<div class="col span-1-of-2">
 					<ul class="footer-nav">
-						<li><a href"#">About us</a></li>
+						<li><a href"#">A propos</a></li>
 						<li><a href"#">Blog</a></li>
 						<li><a href"#">Press</a></li>
 						<li><a href"#">iOS App</a></li>
@@ -201,7 +201,7 @@
 			</div>
 			<div class="row">
 				<p>
-						Innovate est un prototype d'un bank numerique créee pour des raisons non lucratifs .
+						Innovate est un prototype de banque numérique créée pour des raisons non lucratives .
 					</p>
 			</div>
 		</footer>

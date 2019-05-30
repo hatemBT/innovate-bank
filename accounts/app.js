@@ -65,7 +65,7 @@ app.post('/api/accounts/deposit', function (req, res) {
             return;
         }
         let amount = Number(results[0].balance) + Number(req.body.amount);
-        accounts.findOneAndUpdate({'number': req.body.number}, {'balance': amount}, function (err, results) {
+        accounts.findOneAndUpdate({'number': req.body.number},{new: true}, {'balance': amount}, function (err, results) {
             if (err) {
                 console.log(err);
                 res.status(500).send({'err': err});
@@ -76,33 +76,27 @@ app.post('/api/accounts/deposit', function (req, res) {
     });
 });
 app.get('/api/account/solde', function(req, res) {
-    findUser({'uuid':req.body.uuid}, function (err, user) {
+    accounts.findOne({$and:[{'uuid': req.body.uuid},{'type':req.body.type}]}, function (err, results) {
         if (err) {
             console.log(err);
-            res.status(500).send({'err': 'Something went wrong. Try again in a few seconds, or contact support.'});
+            res.status(500).send({'err': err});
             return;
         }
-        if (!user) {
-            res.status(500).send({'err': 'No account Found'});
+        if (results.length === 0) {
+            console.log('account of the given user is  not found');
+            res.status(500).send({'err': 'account of the given user isnot found'});
             return;
         }
-        let amount = Number(user.balance)
-        res.status(200).send(amount);
-    });
+        amount = Number(results.balance);
+       console.log(amount);
+       res.status(200).send(amount);
+
+     
+      
+});
 });
 
-function findUser (criteria, callback){
-    accounts.find(criteria, function (err, results) {
-        if (err) {
-            console.log(err);
-            callback(err);
-        }
-        if (Object.keys(criteria).length > 0) {
-          results = results[0];
-        }
-        callback(null, results);
-    });
-};
+
 
 
 app.post('/api/accounts/withdraw', function (req, res) {
@@ -120,7 +114,7 @@ app.post('/api/accounts/withdraw', function (req, res) {
         let amount = Number(results[0].balance) - Number(req.body.amount);
        
         console.log(amount);
-        accounts.findOneAndUpdate({'number': req.body.number}, {'balance': amount}, function (err, results) {
+        accounts.findOneAndUpdate({'number': req.body.number},{new: true}, {'balance': amount}, function (err, results) {
             if (err) {
                 console.log(err);
                 res.status(500).send({'err': err});

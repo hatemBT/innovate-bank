@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="res/css/queries.css">
 		<link rel="stylesheet" href="vendors/css/ionicons.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
-		<title>Innovate: Digital Bank</title>
+		<title>Innovate: la Banque digitale</title>
 	</head>
 
 	<body>
@@ -21,11 +21,11 @@
 					<img src="res/img/logo-outline.png" alt="Innovate logo" class="logo">
 					<img src="res/img/logo.png" alt="Innovatee logo" class="logo-black">
 					<ul class="main-nav">
-						<li><a href="overview.html">Depenses</a></li>
+						<li><a href="overview.html">Dépenses</a></li>
 						<li><a href="bills.html">Factures</a></li>
 						<li><a href="accounts.html">Comptes</a></li>
 						<li><a href="chat.html">Support</a></li>
-						<li><a href="/endpoints/logout">Se Deconnecter</a></li>
+						<li><a href="/endpoints/logout">Se Déconnecter</a></li>
 					</ul>
 					<a class="mobile-nav-icon"><i class="js-mobile-nav-icon ion-navicon-round"></i></a>
 				</div>
@@ -38,7 +38,7 @@
 			</div>
 			<div class="row">
 				<h3><span class="small">TND </span><span id='js-balance'></span></h3>
-				<p>Balance Totale</p>
+				<p>Solde total</p>
 			</div>
 		</section>
 
@@ -114,7 +114,7 @@
 				<h2>Procedez?</h2>
 				<a class="close" href="#">&times;</a>
 				<div class="content">
-					Vous etes enttrain de créeer un compte courant .Ce compte est gratuit et maintenu. Pas de balance minimum obligé.
+					Vous etes entrain d'activer votre comptes courant.Ce compte est activé et maintenu gratuitement .Pas de minimum de balance réquis.
 				</div>
 				<a id="current_confirm_button" class="btn btn-full" href="/endpoints/accounts/activate?type=current">Continuez</a>
 			</div>
@@ -125,8 +125,8 @@
 				<h2>Procedez?</h2>
 				<a class="close" href="#">&times;</a>
 				<div class="content">
-						Vous etes enttrain de créeer un compte courant .Ce compte est gratuit et maintenu. Pas de balance minimum obligé.
-					</div>
+					Vous êtes entrain d'activé votre comptes courant .Ce compte peut être activé et maintenu gratuitement .
+				</div>
 				<a id="current_confirm_button" class="btn btn-full" href="">Continuez</a>
 			</div>
 		</div>
@@ -136,7 +136,8 @@
 				<h2>Procedez?</h2>
 				<a class="close" href="#">&times;</a>
 				<div class="content">
-						Vous etes enttrain de créeer un compte courant .Ce compte est gratuit et maintenu. Un balance de 3000TND minimum est obligatoire.
+						Vous êtes entrain d'activé votre comptes courant .Ce compte peut être activé et maintenu gratuitement .3000 TND de solde minimum est réquis.
+						
 				</div>
 				<a id="savings_confirm_button" class="btn btn-full" href="/endpoints/accounts/activate?type=savings">Continuez</a>
 			</div>
@@ -144,10 +145,11 @@
 		
 		<div id="confirm-popup-credit" class="overlay">
 			<div class="popup">
-				<h2>Procedez?</h2>
+				<h2>Procédez?</h2>
 				<a class="close" href="#">&times;</a>
 				<div class="content">
-					Vous etes entrain d'activer une carte credit .Cette carte de credit est gratuitement .Un interet de 3.4 % est appliqué.
+						Vous etes entrain d'activé votre comptes courant .Ce compte peut etre activé et maintenu gratuitement .
+						Un rapport de 304% d'interet est appliqué .
 				</div>
 				<a id="credit_confirm_button" class="btn btn-full" href="/endpoints/accounts/activate?type=credit">Continuez</a>
 			</div>
@@ -155,10 +157,12 @@
 		
 		<div id="confirm-popup-prepaid" class="overlay">
 			<div class="popup">
-				<h2>Procedez?</h2>
+				<h2>Proceed?</h2>
 				<a class="close" href="#">&times;</a>
 				<div class="content">
-					Vous etes entrain d'activer une carte prepayee .Cette carte est gratuitement et maintenue.Pas de balance minimum oblige .  Les charges de Retrait et depot  sont appliques.
+
+		Vous êtes entrain d'activé votre comptes courant .Ce compte peut être activé et maintenu gratuitement .Pas de solde minimum réquis.
+  Les charges de retrait et depos sont appliquées.
 				</div>
 				<a id="prepaid_confirm_button" class="btn btn-full" href="/endpoints/accounts/activate?type=prepaid">Continuez</a>
 			</div>
@@ -170,21 +174,21 @@
 		
 		<div id="confirm-popup-transfer" class="overlay">
 			<div class="popup">
-				<h2>Procedez avec le transfert ?</h2>
+				<h2>Procédez  le transfert?</h2>
 				<a class="close" href="#">&times;</a>
 				<form method="post" action="endpoints/accounts/transfer" class="sign-up-form">
 				<div class="content">
 					<div class="row left-align">
 						<div class="col span-1-of-3">
-							<label for="amount">Je suis entrain de ttransferer </label>
+							<label for="amount"> Transférez </label>
 						</div>
 						<div class="col span-2-of-3">
-							<input type="number" name="amount" id="amount" placeholder="Amount" required>
+							<input type="number" name="amount" id="amount" placeholder="montant" required>
 						</div>
 					</div>
 					<div class="row left-align">
 						<div class="col span-1-of-3">
-							<label>De mon compte  no.</label>
+							<label>De mon compte no.</label>
 						</div>
 						<div class="col span-2-of-3">
 							<select name="from" id="from">
@@ -212,10 +216,10 @@
 		
 		<div id="activated" class="overlay">
 			<div class="popup">
-				<h2>Fait!</h2>
+				<h2>Done!</h2>
 				<a class="close" href="#">&times;</a>
 				<div class="content">
-					Super ! Votre compte etait active avec succe.
+					Votre compte est activé avec succés .
 				</div>
 				<i class="ion-android-checkmark-circle icon-big"></i>
 			</div>
@@ -226,7 +230,7 @@
 				<h2>Fait!</h2>
 				<a class="close" href="#">&times;</a>
 				<div class="content">
-					Transfert , fait.Votre transaction est achevee avec succee.
+					Transfert est fait .Votre transaction est terminée avec succés .
 				</div>
 				<i class="ion-android-checkmark-circle icon-big"></i>
 			</div>
@@ -234,10 +238,10 @@
 
 		<div id="failure" class="overlay">
 			<div class="popup">
-				<h2>Un probleme est survenu.</h2>
+				<h2>Un probleme est survenu!</h2>
 				<a class="close" href="#">&times;</a>
 				<div class="content">
-					Votre transaction peut ne pas etre complete.Essayez une autre fois ou contactez vous le support s'il vous plait .
+					Votre transaction est incomplète .Essayez pour une autre fois ou contactez le support .
 				</div>
 				<i class="ion-ios-close icon-big"></i>
 			</div>
@@ -247,7 +251,7 @@
 			<div class="row">
 				<div class="col span-1-of-2">
 					<ul class="footer-nav">
-						<li><a href"#">About us</a></li>
+						<li><a href"#">A propos</a></li>
 						<li><a href"#">Blog</a></li>
 						<li><a href"#">Press</a></li>
 						<li><a href"#">iOS App</a></li>
@@ -265,7 +269,7 @@
 			</div>
 			<div class="row">
 				<p>
-					Innovate est un prototype d'un bank numerique créee pour des raisons non lucratifs .
+						Innovate est un prototype de banque numérique créée pour des raisons non lucratives .
 				</p>
 			</div>
 		</footer>

@@ -55,7 +55,7 @@ $(document).ready(function() {
               $(selectors[type].label).html('Compte No. ');
               $(selectors[type].number).html(account.number);
               $(selectors[type].balance).html('TND' + account.balance);
-              $(selectors[type].button).html('Transfer');
+              $(selectors[type].button).html('Transferez');
               if (account.balance <= 0) $(selectors[type].button).removeClass('btn-ghost').addClass('btn-disabled')
               $(selectors[type].button).attr("href", "#confirm-popup-transfer");
               total += account.balance
@@ -63,7 +63,7 @@ $(document).ready(function() {
               `<option value="` + account.number + `">` + account.number + ` (` + type + `)` + `</option>`
             }
             else {
-              $(selectors[type].button).html('Activate');
+              $(selectors[type].button).html('Activez');
               $(selectors[type].button).attr("href", "#confirm-popup-" + type);
               $(selectors[type].button).removeClass('btn-disabled').addClass('btn-ghost')
             }

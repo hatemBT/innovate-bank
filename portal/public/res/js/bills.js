@@ -80,7 +80,7 @@ $(document).ready(function() {
               $(selectors[category].button).removeClass('btn-ghost').addClass('btn-disabled')
             }
           }
-          $('#js-total').html(`<span class="small">TND</span>` + total)
+          $('#js-total').html(`<span class="small">TND </span>` + total)
         }
       };
       http.send(JSON.stringify({'uuid': uuid}));

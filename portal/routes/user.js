@@ -39,6 +39,7 @@ module.exports = function (app, request, ports) {
 
     app.get('/endpoints/logout', function (req, res) {
         res.cookie("connect.sid", "", {expires: new Date()});
+       // console.log(req.session.user);
         req.session.destroy(function (err) {
             console.log("session destroyed");
             res.redirect('/index.html');
