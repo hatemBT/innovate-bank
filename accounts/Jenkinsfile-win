@@ -10,7 +10,7 @@ node {
         remote.password = password
 
         stage("Build") {
-            powershell 'npm install'
+            sshCommand remote: remote, command: 'powershell'
         }
         stage("Test") {
             powershell 'npm test'
