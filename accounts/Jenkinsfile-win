@@ -8,6 +8,11 @@ node {
     withCredentials([usernamePassword(credentialsId: '43aeb327-5719-49ec-af8a-5f1ab2fe92aa', passwordVariable: 'password', usernameVariable: 'userName')]) {
         remote.user = userName
         remote.password = password
+        
+        stage("ssh test") {
+            sh "ssh administrator@192.168.0.78"
+            sh "hostname"
+        }
 
         stage("Build") {
             sshCommand remote: remote, command: "powershell ping"
