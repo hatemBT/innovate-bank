@@ -1,0 +1,21 @@
+def remote = [:]
+remote.name = "node"
+remote.host = "WIN-V460H66VNR7"
+remote.allowAnyHosts = true
+
+node {
+    withCredentials([usernamePassword(credentialsId: 'sshUserAcct', passwordVariable: 'password', usernameVariable: 'userName')]) {
+        remote.user = administrator
+        remote.password = Azerty123
+
+        stage("Build") {
+            sshCommand remote: remote, command: 'npm install'
+        }
+        stage("Test") {
+            sshCommand remote: remote, command: 'npm test'
+        }
+        stage("Deploy") {
+            sshCommand remote: remote, command: 'npm start'
+        }
+    }
+}
