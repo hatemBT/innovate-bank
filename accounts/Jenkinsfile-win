@@ -5,7 +5,7 @@ remote.allowAnyHosts = true
 
 node {
     checkout scm
-    withCredentials([usernamePassword(credentialsId: 'administrator', passwordVariable: 'password', usernameVariable: 'userName')]) {
+    withCredentials([usernamePassword(credentialsId: '43aeb327-5719-49ec-af8a-5f1ab2fe92aa', passwordVariable: 'password', usernameVariable: 'userName')]) {
         remote.user = userName
         remote.password = password
 
