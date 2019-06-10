@@ -5,9 +5,9 @@ remote.allowAnyHosts = true
 
 node {
     checkout scm
-    withCredentials() {
-        remote.user = administrator
-        remote.password = Azerty123
+    withCredentials([usernamePassword(credentialsId: 'administrator', passwordVariable: 'password', usernameVariable: 'userName')]) {
+        remote.user = userName
+        remote.password = password
 
         stage("Build") {
             sshCommand remote: remote, command: 'npm install'
