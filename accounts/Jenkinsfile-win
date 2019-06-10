@@ -13,10 +13,10 @@ node {
             sshCommand remote: remote, command: "npm install"
         }
         stage("Test") {
-            powershell 'npm test'
+            sshCommand remote: remote, command: 'npm test'
         }
         stage("Deploy") {
-            powershell 'npm start'
+            sshCommand remote: remote, command: 'npm start'
         }
     }
 }
