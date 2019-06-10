@@ -6,9 +6,6 @@ remote.allowAnyHosts = true
 node {
     checkout scm
     sshagent(['43aeb327-5719-49ec-af8a-5f1ab2fe92aa']) {
-        remote.user = userName
-        remote.password = password
-        
         stage("ssh test") {
             sh "ssh administrator@192.168.0.78"
             sh "hostname"
