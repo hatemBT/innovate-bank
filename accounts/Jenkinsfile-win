@@ -9,11 +9,6 @@ node {
         remote.user = userName
         remote.password = password
 
-        stage("ssh test") {
-            sh "ssh -T administrator@192.168.0.78"
-            sh "hostname"
-        }
-
         stage("Build") {
             sshCommand remote: remote, command: "powershell ping"
         }
