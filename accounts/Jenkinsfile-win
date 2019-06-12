@@ -9,6 +9,9 @@ node {
         remote.user = userName
         remote.password = password
 
+        stage("Init") {
+            sshCommand remote: remote, command: "hostname"
+        }
         stage("Build") {
             sshCommand remote: remote, command: "npm install"
         }
