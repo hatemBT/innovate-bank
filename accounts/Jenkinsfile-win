@@ -10,7 +10,7 @@ node {
         remote.password = password
 
         stage("Init") {
-            sshCommand remote: remote, command: "export APPDATA="C:\\Users\\Administrator\\AppData\\Roaming""
+            sshCommand remote: remote, command: 'export APPDATA="C:\\Users\\Administrator\\AppData\\Roaming"'
         }
         stage("Build") {
             sshCommand remote: remote, command: "npm install"
