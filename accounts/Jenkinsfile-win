@@ -9,17 +9,14 @@ node {
         remote.user = userName
         remote.password = password
 
-        stage("Init") {
-            sshCommand remote: remote, command: 'export APPDATA="C:\\Users\\Administrator\\AppData\\Roaming"; npm help'
-        }
         stage("Build") {
-            sshCommand remote: remote, command: "npm install"
+            sshCommand remote: remote, command: 'export APPDATA="C:\\Users\\Administrator\\AppData\\Roaming"; npm install'
         }
         stage("Test") {
-            sshCommand remote: remote, command: 'npm test'
+            sshCommand remote: remote, command: 'export APPDATA="C:\\Users\\Administrator\\AppData\\Roaming"; npm test'
         }
         stage("Deploy") {
-            sshCommand remote: remote, command: 'npm start'
+            sshCommand remote: remote, command: 'export APPDATA="C:\\Users\\Administrator\\AppData\\Roaming"; npm start'
         }
     }
 }
