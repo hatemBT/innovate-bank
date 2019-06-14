@@ -64,8 +64,6 @@ When thinking of business capabilities, our imaginary bank will need the followi
 You have multiple options to setup your own instance:
 
 * [Run it locally](#run-locally)
-* [Deploy to IBM Cloud the hard way (manual, multi-stage)](#deploy-to-ibm-cloud-the-hard-way)
-* [Deploy to IBM Cloud Private](#deploy-to-ibm-cloud-private)
 
 ## Run Locally
 
