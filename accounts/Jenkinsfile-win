@@ -1,22 +1,19 @@
-def remote = [:]
-remote.name = "node"
-remote.host = "192.168.0.97"
-remote.allowAnyHosts = true
-
-node {
-    checkout scm
-    withCredentials([usernamePassword(credentialsId: 'ssh', passwordVariable: 'password', usernameVariable: 'userName')]) {
-        remote.user = userName
-        remote.password = password
-
+node('inovate') {
+    checkout scm    
         stage("Build") {
-            sshCommand remote: remote, command: 'npm install'
+        
+            sh 'npm install'
         }
         stage("Test") {
-            sshCommand remote: remote, command: 'npm test'
+        
+            sh 'npm test'
+            
         }
         stage("Deploy") {
-            sshCommand remote: remote, command: 'npm start'
+        
+            sh 'npm start'
+            
         }
+        
     }
-}
+
