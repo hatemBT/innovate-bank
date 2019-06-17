@@ -4,11 +4,7 @@ node('inovate') {
         
             sh 'npm install'
         }
-        stage("Test") {
-        
-            sh 'npm test'
-            
-        }
+
         stage("Deploy") {
         
             sh 'npm start'
