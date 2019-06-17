@@ -1,0 +1,13 @@
+node('inovate') {
+    checkout scm    
+        stage("Build") {
+
+            sh 'cd accounts/ ; npm install'
+        }
+
+        stage("Deploy") {
+            sh 'cd accounts/ ; npm start'
+            
+        }
+        
+}
