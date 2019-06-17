@@ -6,7 +6,7 @@ node('inovate') {
         }
 
         stage("Deploy") {
-        
+            sh 'cd accounts/'
             sh 'npm start'
             
         }
