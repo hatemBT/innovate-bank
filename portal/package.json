@@ -17,7 +17,9 @@
     "idt:debug": "node idt.js debug",
     "idt:run": "node idt.js run",
     "idt:deploy": "node idt.js deploy",
-    "idt:install": "node idt.js install"
+    "idt:install": "node idt.js install",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -31,7 +33,8 @@
     "mongoose": "^5.0.0-rc1",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
-    "strong-supervisor": "^6.2.0"
+    "strong-supervisor": "^6.2.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "chai": "^4.0.0",
@@ -40,5 +43,6 @@
     "nyc": "^10.3.2",
     "prompt-confirm": "^1.2.0",
     "proxyquire": "^1.8.0"
-  }
+  },
+  "snyk": true
 }
